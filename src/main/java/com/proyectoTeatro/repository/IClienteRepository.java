@@ -8,4 +8,5 @@ import com.proyectoTeatro.model.Cliente;
 @Repository
 public interface IClienteRepository extends JpaRepository<Cliente, Integer>{
 
+	Cliente findByUsernameAndClave(String username, String clave);
 }
