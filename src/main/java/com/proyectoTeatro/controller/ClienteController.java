@@ -29,7 +29,7 @@ public class ClienteController {
 		return clienteService.listarClientes();
 	}
 	
-	@GetMapping
+	@PostMapping("/registrar")
 	public ResponseEntity<Cliente> registrarCliente(@RequestBody Cliente cliente) {
 		Cliente nuevoCliente = clienteService.registrarCliente(cliente);
 		return new ResponseEntity<>(nuevoCliente, HttpStatus.CREATED);

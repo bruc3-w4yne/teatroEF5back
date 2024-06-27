@@ -19,7 +19,7 @@ public class AreaController {
 	@Autowired
 	private IAreaRepository repoArea;
 	
-	@GetMapping
+	@GetMapping("/listar")
 	public List<Area> listarAreas() {
 		return repoArea.findAll();
 	}

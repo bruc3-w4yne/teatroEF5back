@@ -19,7 +19,7 @@ public class FuncionController {
 	@Autowired
 	private IFuncionRepository repoFun;
 	
-	@GetMapping
+	@GetMapping("/listar")
 	public List<Funcion> listarFunciones() {
 		return repoFun.findAll();
 	}
