@@ -2,6 +2,7 @@ package com.proyectoTeatro.controller;
 
 import java.util.List;
 
+<<<<<<< HEAD
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoTeatro.model.Ticket;
 import com.proyectoTeatro.repository.ITicketRepository;
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.proyectoTeatro.model.Ticket;
+>>>>>>> 3054d9b4d85409ca6b6d06d429e14d884c3cfdca
 import com.proyectoTeatro.service.TicketService;
 
 @RestController
@@ -27,9 +38,12 @@ import com.proyectoTeatro.service.TicketService;
 public class TicketController {
 	
 	@Autowired
+<<<<<<< HEAD
 	private ITicketRepository repoTic;
 	
 	@Autowired
+=======
+>>>>>>> 3054d9b4d85409ca6b6d06d429e14d884c3cfdca
 	private TicketService service;
 	
 	@GetMapping("/listar")
@@ -38,6 +52,7 @@ public class TicketController {
 	}
 	
 	
+<<<<<<< HEAD
 	@PostMapping ("/agregarTicket")
 	public ResponseEntity<Ticket> agregarTicket (
 			@RequestBody Ticket ticket) {
@@ -74,5 +89,8 @@ public class TicketController {
 		repoTic.deleteById(id);
 		return "Ticket eliminado";
 	}
+=======
+	
+>>>>>>> 3054d9b4d85409ca6b6d06d429e14d884c3cfdca
 
 }

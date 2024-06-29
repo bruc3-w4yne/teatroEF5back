@@ -25,6 +25,7 @@ public class ClienteService {
 	public Cliente login(String username, String clave) {
 		return repoCli.findByUsernameAndClave(username, clave);
 	}
+<<<<<<< HEAD
 	
 	public Cliente actualizarCliente(Cliente cliente) {
 		return repoCli.save(cliente);
@@ -33,4 +34,7 @@ public class ClienteService {
 	public Cliente buscarCliente(Integer id) {
 		return repoCli.findById(id).get();
 	}
+=======
+
+>>>>>>> 3054d9b4d85409ca6b6d06d429e14d884c3cfdca
 }
