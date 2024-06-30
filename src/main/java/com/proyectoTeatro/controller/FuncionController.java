@@ -3,7 +3,6 @@ package com.proyectoTeatro.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,19 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-=======
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
->>>>>>> 3054d9b4d85409ca6b6d06d429e14d884c3cfdca
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoTeatro.model.Funcion;
 import com.proyectoTeatro.repository.IFuncionRepository;
-<<<<<<< HEAD
 import com.proyectoTeatro.service.FuncionService;
-=======
->>>>>>> 3054d9b4d85409ca6b6d06d429e14d884c3cfdca
 
 @RestController
 @RequestMapping("/api/funciones")
@@ -35,14 +29,13 @@ public class FuncionController {
 	@Autowired
 	private IFuncionRepository repoFun;
 	
-<<<<<<< HEAD
 	@Autowired
 	private FuncionService service;
 	
-	@GetMapping ("/listar")
+	/*@GetMapping ("/listar")
 	public ResponseEntity<List<Funcion>> listarFunciones() {
 		return ResponseEntity.ok(service.listarFunciones());
-	}
+	}*/
 	
 	@PostMapping ("/agregarFuncion")
 	public ResponseEntity<Funcion> agregarFuncion(
@@ -79,13 +72,8 @@ public class FuncionController {
 		repoFun.deleteById(id);
 		return "Funcion eliminada";
 	}
-	
-	
-	
-=======
 	@GetMapping("/listar")
 	public List<Funcion> listarFunciones() {
 		return repoFun.findAll();
 	}
->>>>>>> 3054d9b4d85409ca6b6d06d429e14d884c3cfdca
 }
