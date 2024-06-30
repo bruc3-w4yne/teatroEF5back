@@ -15,5 +15,8 @@ public interface FuncionService {
 	public Funcion actualizarFuncion(Funcion f);
 	
     void eliminar(int id);
+    
+	public List<Funcion> listarFuncionporEvento(int id);
+
 	
 }

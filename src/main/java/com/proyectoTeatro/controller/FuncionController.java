@@ -51,6 +51,7 @@ public class FuncionController {
 		return ResponseEntity.ok(service.buscarFuncion(id));
 	}
 	
+	
 	@PutMapping("/actualizar/{id}")
 	public ResponseEntity<Funcion> actualizarFuncion(
 			@PathVariable Integer id, 
@@ -87,5 +88,11 @@ public class FuncionController {
 	@GetMapping("/listar")
 	public List<Funcion> listarFunciones() {
 		return repoFun.findAll();
+	}
+	
+	@GetMapping("/buscarFuncionDeEvento/{id}")
+	public List<Funcion> buscarFuncion(
+			@PathVariable int id) {
+		return service.listarFuncionporEvento(id);
 	}
 }

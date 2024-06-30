@@ -43,6 +43,12 @@ public class FuncionServiceImpl implements FuncionService {
 		repoFun.deleteById(id);		
 	}
 
+
+	@Override
+	public List<Funcion> listarFuncionporEvento(int id) {
+		return repoFun.findByIdevento(id);
+	}
+
 	
 
 }
