@@ -37,6 +37,12 @@ public class FuncionServiceImpl implements FuncionService {
 		return repoFun.save(f);
 	}
 
+
+	@Override
+	public void eliminar(int id) {
+		repoFun.deleteById(id);		
+	}
+
 	
 
 }

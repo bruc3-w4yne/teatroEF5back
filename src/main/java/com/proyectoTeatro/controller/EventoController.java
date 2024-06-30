@@ -69,7 +69,7 @@ public class EventoController {
 	@DeleteMapping("/eliminar/{id}")
     @ResponseBody
     public ResponseEntity<?> eliminarFuncion(@PathVariable int id) {
-        String mensaje = "Funcion eliminada correctamente";
+        String mensaje = "Evento eliminada correctamente";
         HashMap<String, Object> salida = new HashMap<>();
         try {
             service.eliminarEventos(id);
@@ -80,4 +80,5 @@ public class EventoController {
         salida.put("mensaje", mensaje);
         return ResponseEntity.ok(salida) ;
     }
+	
 }

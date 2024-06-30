@@ -1,5 +1,6 @@
 package com.proyectoTeatro.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,10 +69,21 @@ public class FuncionController {
 	
 	
 	@DeleteMapping("/eliminar/{id}")
-	public String eliminarFuncion(@PathVariable Integer id){
-		repoFun.deleteById(id);
-		return "Funcion eliminada";
+	public ResponseEntity<?> eliminarFuncion(@PathVariable int id){
+        String mensaje = "Funcion eliminada correctamente";
+        HashMap<String, Object> salida = new HashMap<>();
+        try {service.eliminar(id);
+        mensaje = "Se elimino correctamente";
+    } catch (Exception ex) {
+        mensaje = "Error al eliminar la funcion: " + ex.getMessage();
+    }
+    salida.put("mensaje", mensaje);
+    return ResponseEntity.ok(salida) ;
+        	
 	}
+	
+	
+	
 	@GetMapping("/listar")
 	public List<Funcion> listarFunciones() {
 		return repoFun.findAll();

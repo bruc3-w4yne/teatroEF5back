@@ -14,5 +14,5 @@ public interface EventoService {
 	
 	public Evento actualizarEventos(Evento e);
 	
-	public void eliminarEventos(Integer id);
+	public void eliminarEventos(int id);
 }

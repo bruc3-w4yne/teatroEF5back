@@ -35,8 +35,7 @@ public class EventoServiceImpl implements EventoService {
 	}
 
 	@Override
-	public void eliminarEventos(Integer id) {
-
+	public void eliminarEventos(int id) {
 		 repoEven.deleteById(id);
 	}
 

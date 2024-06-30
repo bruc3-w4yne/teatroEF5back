@@ -14,4 +14,6 @@ public interface FuncionService {
 	
 	public Funcion actualizarFuncion(Funcion f);
 	
+    void eliminar(int id);
+	
 }

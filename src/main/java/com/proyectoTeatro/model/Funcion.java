@@ -3,6 +3,8 @@ package com.proyectoTeatro.model;
 import java.sql.Date;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -15,6 +17,7 @@ import lombok.Data;
 public class Funcion {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idfuncion;
 	private int idevento;
 	private Date fecha;

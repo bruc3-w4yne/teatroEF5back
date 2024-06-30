@@ -63,6 +63,7 @@
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
 			<item value="C:\Users\braya\Documents\Experiencias5\teatroEF5back"/>
+			<item value="C:\Users\braya\Documents\Experiencias5"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
