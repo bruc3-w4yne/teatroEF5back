@@ -34,4 +34,10 @@ public class EventoServiceImpl implements EventoService {
 		return repoEven.save(e);
 	}
 
+	@Override
+	public void eliminarEventos(Integer id) {
+
+		 repoEven.deleteById(id);
+	}
+
 }

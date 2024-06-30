@@ -1,5 +1,6 @@
 package com.proyectoTeatro.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectoTeatro.model.Evento;
@@ -65,9 +67,17 @@ public class EventoController {
 	
 	
 	@DeleteMapping("/eliminar/{id}")
-	public String eliminarEvento(@PathVariable Integer id){
-		repoEven.deleteById(id);
-		return "Evento eliminado";
-	}
-
+    @ResponseBody
+    public ResponseEntity<?> eliminarFuncion(@PathVariable int id) {
+        String mensaje = "Funcion eliminada correctamente";
+        HashMap<String, Object> salida = new HashMap<>();
+        try {
+            service.eliminarEventos(id);
+            mensaje = "Se elimino correctamente";
+        } catch (Exception ex) {
+            mensaje = "Error al eliminar la funcion: " + ex.getMessage();
+        }
+        salida.put("mensaje", mensaje);
+        return ResponseEntity.ok(salida) ;
+    }
 }
